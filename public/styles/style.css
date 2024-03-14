@@ -1,0 +1,312 @@
+/* common layout syles */
+:root {
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: blue;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* home page styles */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main > * {
+  width: 1200px;
+  max-width: 1200px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  color: blue;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav > a {
+  display: inline-block;
+  align-items: center;
+  padding: 5px 0px;
+  padding-left: 10px;
+}
+
+.coursework {
+  border-bottom: 2px solid black;
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.intro {
+  font-size: 25px;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  width: 120px;
+  padding: 15px 0px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  margin: 0 10px;
+}
+
+.container a:hover {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+}
+
+/* create page styles */
+.title {
+  min-width: fit-content;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+.title > div {
+  margin-top: 15px;
+  width: 50%;
+}
+
+.title label {
+  display: inline-block;
+  width: 150px;
+  margin: 5px 0px;
+  font-size: 18px;
+}
+
+.title input {
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.btn-container > button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  padding: 20px 0;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.btn-container > button:hover {
+  background-color: white;
+  border: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 10px;
+  width: 100%;
+  color: red;
+  font-size: 16px;
+}
+
+.success {
+  margin-top: 10px;
+  width: 100%;
+  color: green;
+  font-size: 16px;
+}
+
+/* students page styles */
+.students-list-container {
+  padding: 0px 20px;
+}
+
+.h1-students {
+  margin: 10px 0px;
+}
+
+.list-of-students {
+  display: flex;
+  width: fit-content;
+  height: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+.list-of-students:last-child {
+  border-bottom: 1px solid black;
+}
+
+.student-name {
+  width: 500px;
+  height: 100%;
+  font-size: 20px;
+  color: inherit;
+  padding: 10px 5px;
+}
+
+.student-name,
+.list-of-students div:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.list-of-students div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.list-of-students div > a {
+  width: 30px;
+  height: 30px;
+  margin: 0px 20px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: red;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.delete:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
+}
+
+.edit {
+  background-color: greenyellow;
+  border: 1px solid black;
+}
+
+.edit > img,
+.show > img {
+  width: 20px;
+  height: 20px;
+}
+
+.edit:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.show {
+  border: 1px solid black;
+  background-color: beige;
+}
+
+.show:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+/* student info page styles */
+.student-info-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.student-info-container > div {
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.student-info-container > div > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.student-info-container > div > h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.student-info-container > div > div > p {
+  font-size: 18px;
+}
+
+.student-info-container > div > div > p:first-child {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* search screen styles */
+.search-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  margin: 30px 0px;
+}
+
+.search-container > input {
+  padding: 0px 5px;
+  width: 300px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.search-container > button {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: white;
+}
+
+.search-container > button:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #555;
+  color: #555;
+}
