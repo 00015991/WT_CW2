@@ -1,0 +1,36 @@
+extends layout.pug
+
+block content 
+    form(action=`/edit/${ student.id }` method='POST')
+        .title
+            h2 Update the student information 
+            if error 
+                p.error You made some mistake while updating the form. Please try again! 
+            if success 
+                p.success The student's information was updated!
+            .first-name
+                label(for="first-name-input") First name:
+                input(type="text" name = "firstName" id="first-name-input" value = `${ student.firstName }`)
+            .last-name
+                label(for="last-name-input") Last name: 
+                input(type="text" name = "lastName" id="last-name-input" value = `${ student.lastName }`)
+            .middle-name
+                label(for="middle-name-input") Mid name: 
+                input(type="text" name = "middleName" id="middle-name-input" value = `${ student.middleName }`)
+            .age
+                label(for="age-input") Age: 
+                input(type="number" min = "18" max = "100" name = "age" id="age-input" value = `${ student.age }`)
+            .email-address
+                label(for="email-address-input") Email address: 
+                input(type="text" name = "emailAddress" id="email-address-input" value = `${ student.emailAddress }`)
+            .phone-number
+                label(for="phone-number-input") Phone number: 
+                input(type="text" name = "phoneNumber" id="phone-number-input" value = `${ student.phoneNumber }`)
+            .level
+                label(for="level-input") How many Volunteering experience do you have: 
+                input(type="number" name = "level" max = "6" min = "3" id="course-input" value = `${ student.level }`)
+            .course-title
+                label(for="course-title-input") Do you study or work: 
+                input(type="text" name = "courseTitle" id="course-title-input" value = `${ student.courseTitle }`)
+            .btn-container 
+                button Create

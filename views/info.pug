@@ -1,0 +1,35 @@
+extends layout.pug 
+
+block content 
+    div.student-info-container
+        .personal-info 
+            h3 Personal Information 
+            div 
+                p Name:
+                p #{ student.firstName }
+            div 
+                p Surname:
+                p #{ student.lastName }
+            div 
+                p Middle Name:
+                p #{ student.middleName }
+            div 
+                p Age:
+                p #{ student.age }
+        .contact-information 
+            h3 Contact Information
+            div 
+                p Email address:
+                p #{ student.emailAddress }
+            div 
+                p Phone number:
+                p #{ student.phoneNumber }
+        .student-information 
+            h3 Volunteer Information
+            div 
+                p How many Volunteering experience do you have:
+                p #{ student.level }
+            div 
+                p Do you study or work:
+                p #{ student.courseTitle }
+

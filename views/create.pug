@@ -1,0 +1,36 @@
+extends layout.pug
+
+block content 
+    form(action="/create" method='POST') 
+        .title
+            h2 Create a Volunteers information 
+            if error 
+                p.error You made some mistake while filling the form. Please try again! 
+            if success 
+                p.success The student's information was added to database of Volunteers!
+            .first-name
+                label(for="first-name-input") First name:
+                input(type="text" name = "firstName" id="first-name-input")
+            .last-name
+                label(for="last-name-input") Last name: 
+                input(type="text" name = "lastName" id="last-name-input")
+            .middle-name
+                label(for="middle-name-input") Mid name: 
+                input(type="text" name = "middleName" id="middle-name-input")
+            .age
+                label(for="age-input") Age: 
+                input(type="number" min = "18" max = "100" name = "age" id="age-input")
+            .email-address
+                label(for="email-address-input") Email address: 
+                input(type="text" name = "emailAddress" id="email-address-input")
+            .phone-number
+                label(for="phone-number-input") Phone number: 
+                input(type="text" name = "phoneNumber" id="phone-number-input")
+            .level
+                label(for="level-input") How many Volunteering experience do you have: 
+                input(type="number" name = "level" max = "6" min = "3" id="course-input")
+            .course-title
+                label(for="course-title-input") Do you study or work: 
+                input(type="text" name = "courseTitle" id="course-title-input")
+            .btn-container 
+                button Create
